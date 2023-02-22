@@ -11,7 +11,7 @@ class SleepLog {
 
 
   factory SleepLog.fromJson(Map<String, dynamic> json) {
-    //final level = int.tryParse(json['level']); //level에 담겨있는 값이 string이기 때문에 int형으로 변환할 수가 없음
+    //final level = int.tryParse(json['level']); //level에 담겨있는 값이 string이기 때문에 int형으로 변환x
     final level = json['level'];
     int levelInt;
     if(level is int){
