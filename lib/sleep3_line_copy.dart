@@ -51,10 +51,17 @@ class _SleepChartState extends State<SleepChart> {
   bool _isLoading = false;     //로딩 변수 설정(async에서 데이터를 다 받기 전에 build되는 것을 방지하기 위해 변수 설정해줌)
 
 
+
   @override
   void initState() {
     super.initState(); //딱 한번 실행됨
     print("initstate 실행");
+    _fetchSleepLogs();
+  }
+
+  @protected
+  void didUpdateWidget(SleepChart oldWidget){
+    super.didUpdateWidget(oldWidget);
     _fetchSleepLogs();
   }
 
